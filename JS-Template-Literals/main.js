@@ -31,6 +31,17 @@ function age (birthYear){
  }
 
 }
+function foods(foods) {
+  return`
+  <h4>Favorite Food</h4>
+  <ul class= "food-list">
+ ${foods.map(function(food){
+return`<li>${food} </li>`
+ }).join('')}
+
+  </ul>
+  `
+}
 function petTemplate(pet){
   return `
   <div class="animal">
@@ -38,7 +49,9 @@ function petTemplate(pet){
   <h2 class = "pet-name">${pet.name} <span class = "species"> (${pet.species})</span>
   </h2>
   <p> <strong>Age:${age(pet.birthYear)}</strong> </p>
+  ${pet.favFoods ? foods(pet.favFoods) : ''}
   </div>
+
   `
 }
 document.getElementById("app").innerHTML=`
