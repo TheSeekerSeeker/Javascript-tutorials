@@ -2,7 +2,7 @@ const petsData = [
   {
     name: "Purrsloud",
     species: "Cat",
-    favFoods: ["wet food", "dry food", "<strong>any</strong> food"],
+    favFoods: ["wet food", "dry food", "any food"],
     birthYear: 2021,
     photo: "https://learnwebcode.github.io/json-example/images/cat-2.jpg"
   },
@@ -10,6 +10,7 @@ const petsData = [
     name: "Barksalot",
     species: "Dog",
     birthYear: 2008,
+    favFoods: ["meat", "any food", "celery"],
     photo: "https://learnwebcode.github.io/json-example/images/dog-1.jpg"
   },
   {
@@ -20,11 +21,14 @@ const petsData = [
     photo: "https://learnwebcode.github.io/json-example/images/cat-1.jpg"
   }
 ];
-function age (birthYear){
- let calculatedAge = new Date().getFullYear - birthYear;
+
+function age (birthYear)
+{
+ let calculatedAge = new Date()
+ .getFullYear - birthYear;
  if (calculatedAge === 1) {
    return '1 Year old'
- }else if (calculatedAge ==0){
+ }else if (calculatedAge == 0){
    return "Baby"
  }else {
    return `${calculatedAge}Years old`;
@@ -33,24 +37,25 @@ function age (birthYear){
 }
 function foods(foods) {
   return`
-  <h4>Favorite Foods</h4>
-  <ul class= "food-list">
+  <h4>Favorite Food</h4>
+  <ul class= "foods-list">
  ${foods.map(food=>
 `<li>${food} </li>`).join('')}
-
   </ul>
   `
 }
 function petTemplate(pet){
   return `
   <div class="animal">
-  <img class = "pet-photo" src= "${pet.photo}">
-  <h2 class = "pet-name">${pet.name} <span class = "species"> (${pet.species})</span>
+  <img class = "pet-photo" 
+  src= "${pet.photo}">
+  <h2 class = "pet-name">
+  ${pet.name} <span class = "species">
+   (${pet.species})</span>
   </h2>
-  <p> <strong>Age:${age(pet.birthYear)}</strong> </p>
+  <p> <strong>Age</strong>:${age(pet.birthYear)} </p>
   ${pet.favFoods ? foods(pet.favFoods) : ''}
   </div>
-
   `
 }
 document.getElementById("app").innerHTML=`
@@ -58,10 +63,4 @@ document.getElementById("app").innerHTML=`
 ${petsData.map(petTemplate).join('')}
 <p class = "footer">These ${petsData.length} were added recently.Check back soon for updates</p>
 `
-//   return `
-//   <div class="animal">
-//   <img class = "pet-photo" src= "${pet.photo}">
-//   <h2 class = "pet-name">${pet.name} <span class = "species"> (${pet.species})</span>
-//   </h2>
-//   </div>
-//   `
+// prob=NaN years old
