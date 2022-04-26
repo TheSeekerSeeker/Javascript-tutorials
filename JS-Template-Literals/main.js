@@ -63,4 +63,5 @@ document.getElementById("app").innerHTML=`
 ${petsData.map(petTemplate).join('')}
 <p class = "footer">These ${petsData.length} were added recently.Check back soon for updates</p>
 `
+// Not a number
 // prob=NaN years old
