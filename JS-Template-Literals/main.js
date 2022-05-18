@@ -22,6 +22,7 @@ const petsData = [
   }
 ];
 
+
 function age (birthYear)
 {
  let calculatedAge = new Date()
