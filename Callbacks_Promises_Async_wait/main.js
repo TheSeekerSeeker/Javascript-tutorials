@@ -19,8 +19,6 @@
 //     callback();
 //   }, 2000);
 // }
-
-   
   //  createPost({title: 'Post Three', body:'This is post three'}, getPosts);
   //  promises
   const posts =[
