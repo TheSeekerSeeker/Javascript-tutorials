@@ -34,7 +34,6 @@ function age (birthYear)
  }else {
    return `${calculatedAge}Years old`;
  }
-
 }
 function foods(foods) {
   return`
