@@ -34,7 +34,7 @@
    });
    document.body.innerHTML= output;
  }, 1000);
- 
+
  }
  function createPost(post){
    return new Promise((resolve, reject)=> {setTimeout(()=>{
@@ -45,7 +45,6 @@
     }else{
       reject('Error:Something went wrong');
     }
-
    })
    }, 2000);
   }
